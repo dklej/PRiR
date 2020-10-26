@@ -16,7 +16,6 @@ public class Main {
 
         double roznica = koniecFigury - startFigury;
         double sFi, kFi;
-        boolean exit = false;
 
             System.out.print("Wybierz metode:  1. Trapezow 2. Prostokątów 3. Simpsona: ");
             int wybor = s.nextInt();
