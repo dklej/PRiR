@@ -51,31 +51,31 @@ public class Julia extends Thread {
 
         if(art == 0){
             poczatek = 0;
-            koniec = (n/4) * 1; }
-        else if (art == 1){
-            poczatek = (n/ 4) * 1;
-            koniec = (n / 4) * 2; }
-        else if (art == 2){
-            poczatek = (n/ 4) * 2;
-            koniec = (n / 4) * 3; }
-        else if (art == 3){
-            poczatek = (n/ 4) * 3;
-            koniec = (n/4) * 4; }
-        else if (art == 4){
-            poczatek = (n/ 4) * 4;
+            koniec = (n/4)*1; }
+        else if (art==1){
+            poczatek = (n/4)*1;
+            koniec = (n/4)*2; }
+        else if (art==2){
+            poczatek = (n/4)*2;
+            koniec = (n/4)*3; }
+        else if (art==3){
+            poczatek = (n/4)*3;
+            koniec = (n/4)*4; }
+        else if (art==4){
+            poczatek = (n/4)*4;
             koniec = n; }
 
         for (int i = poczatek; i < koniec; i++){
             for (int j = 0; j < n; j++){
-                double bR = 1.5 * (i - n / 2) / (0.5 * 1 * n);
-                double bI = (j - n / 2) / (0.5 * 1 * n);
+                double bR = 1.5*(i-n/2)/(0.5*1*n);
+                double bI = (j-n/2)/(0.5*1*n);
                 double sR = bR, sI = bI;
                 int k = 0;
-                while(k < c && sR * sR + sI * sI < 4.0){
+                while(k<c&&sR*sR+sI*sI<4.0){
                     double stareR = sR;
                     double stareI = sI;
-                    sR = stareR * stareR - stareI * stareI + R;
-                    sI = 2 * stareR * stareI + I;
+                    sR=stareR*stareR-stareI*stareI+R;
+                    sI=2*stareR*stareI+I;
                     k++; }
                 ustaw[i][j] = k; } }
     }
