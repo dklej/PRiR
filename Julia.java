@@ -47,35 +47,35 @@ public class Julia extends Thread {
     }
 
     public void run(){
-        int begin = 0, end = 0;
+        int poczatek = 0, koniec = 0;
 
         if(art == 0){
-            begin = 0;
-            end = (n/4) * 1; }
+            poczatek = 0;
+            koniec = (n/4) * 1; }
         else if (art == 1){
-            begin = (n/ 4) * 1;
-            end = (n / 4) * 2; }
+            poczatek = (n/ 4) * 1;
+            koniec = (n / 4) * 2; }
         else if (art == 2){
-            begin = (n/ 4) * 2;
-            end = (n / 4) * 3; }
+            poczatek = (n/ 4) * 2;
+            koniec = (n / 4) * 3; }
         else if (art == 3){
-            begin = (n/ 4) * 3;
-            end = (n/4) * 4; }
+            poczatek = (n/ 4) * 3;
+            koniec = (n/4) * 4; }
         else if (art == 4){
-            begin = (n/ 4) * 4;
-            end = n; }
+            poczatek = (n/ 4) * 4;
+            koniec = n; }
 
-        for (int i = begin; i < end; i++){
+        for (int i = poczatek; i < koniec; i++){
             for (int j = 0; j < n; j++){
-                double cr = 1.5 * (i - n / 2) / (0.5 * 1 * n);
-                double ci = (j - n / 2) / (0.5 * 1 * n);
-                double zr = cr, zi = ci;
+                double bR = 1.5 * (i - n / 2) / (0.5 * 1 * n);
+                double bI = (j - n / 2) / (0.5 * 1 * n);
+                double sR = bR, sI = bI;
                 int k = 0;
-                while(k < c && zr * zr + zi * zi < 4.0){
-                    double oldr = zr;
-                    double oldi = zi;
-                    zr = oldr * oldr - oldi * oldi + R;
-                    zi = 2 * oldr * oldi + I;
+                while(k < c && sR * sR + sI * sI < 4.0){
+                    double stareR = sR;
+                    double stareI = sI;
+                    sR = stareR * stareR - stareI * stareI + R;
+                    sI = 2 * stareR * stareI + I;
                     k++; }
                 ustaw[i][j] = k; } }
     }
