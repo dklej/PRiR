@@ -8,7 +8,7 @@
 
 int main{
 	int pid;
-  int n = rand()%5000;
+  int n = rand()%10;
   double suma = 0.0;
 	
 	for(int i=0; i<n; i++){
@@ -17,7 +17,8 @@ int main{
   if(pid != 0){
   int d = 3;
   int suma = 1;
-    for(int i=1; i<n; i++){
+  int k = rand()%5000;
+    for(int i=1; i<k; i++){
 	if(i%2 == 0){
 	    	suma -= 1/d;}
 	else{
