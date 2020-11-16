@@ -17,9 +17,12 @@ int main{
   if(pid != 0){
   int d = 3;
   int suma = 1;
-    for(int i=0; i<n; i++){
-		  suma -= 1/d;
-      d += 2;
+    for(int i=1; i<n; i++){
+	if(i%2 == 0){
+	    	suma -= 1/d;}
+	else{
+		suma += 1/d;}
+      	d += 2;
     }
     printf("Suma PI procesu %d wynosi: %f",%getpid(), suma);
   }
