@@ -81,8 +81,7 @@ float f(float x) {
 } 
 
 
-void wez_dane(float* ods_a,
-float* ods_b, int* ods_n, int id, int p ) {
+void wez_dane(float* ods_a, float* ods_b, int* ods_n, int id, int p ) {
     int zrodlo = 0; 
     int docel;
     int typ;
